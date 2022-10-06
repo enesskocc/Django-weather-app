@@ -53,6 +53,6 @@ def home(request):
 def delete(request, id):
     city = get_object_or_404(City, id=id)
     city.delete()
-    messages.success(requests, 'City Deleted')
+    messages.success(request, 'City Deleted')
     return redirect('home')
     
